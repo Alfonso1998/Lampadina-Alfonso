@@ -1,3 +1,4 @@
+
 public class Lampadina {
     private int maxClick;
     private int stato;
@@ -11,6 +12,7 @@ public class Lampadina {
     // METODI
     public void click(int numeroClick) {
             // OGNI CLICK LA LAMPADINA CAMBIA IL SUO STATO DA SPENTA AD ACCESA O ROTTA
+        System.out.println("CLICCA 1 SE VUOI ACCENDERE LA LAMPADINA OPPURE 0 PER SPEGNERLA\n");
 
         for (int i = 0; i <=numeroClick; i++) {
             stato++;
@@ -20,9 +22,9 @@ public class Lampadina {
 
     public void stato() {
         // (ON=0----OFF=1---ROTTA=10)
-           if (stato % 2 == 0 && stato <= maxClick) {
+           if (this.stato % 2 == 0 && this.stato <= this.maxClick) {
                 System.out.println("OFF");
-            } else if (stato % 2 == 1 && stato <= maxClick) {
+            } else if (this.stato % 2 == 1 && this.stato <= this.maxClick) {
                 System.out.println("ON");
             } else {
                 System.out.println("Rotta");
